@@ -13,7 +13,7 @@ https://shobhit-piano.vercel.app/
 
 > Save your project screenshot as **output.png** inside the project folder.
 
-```md
+
 ## 📸 Preview
 
 ![Virtual Piano](output.png)
