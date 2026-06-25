@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(135deg,#dbeafe,#c7d8ef);
+}
+
+main{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.piano-container{
+
+    width:min(95%,790px);
+
+    background:linear-gradient(180deg,#1c1c1c,#111);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.08);
+}
+
+.piano-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.piano-header h1{
+
+    font-family:"Cinzel",serif;
+
+    font-size:48px;
+
+    letter-spacing:3px;
+
+    color:#fff;
+}
+
+.piano-keyboard{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    height:330px;
+
+    scrollbar-width:none;
+}
+
+.piano-keyboard::-webkit-scrollbar{
+    display:none;
+}
+
+/* White Keys */
+
+.white-key{
+
+    width:72px;
+
+    min-width:72px;
+
+    height:100%;
+
+    background:linear-gradient(#fff,#ececec);
+
+    border:2px solid #1a1a1a;
+
+    border-top:none;
+
+    border-radius:0 0 10px 10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:14px;
+
+    color:#d52a2a;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.15s;
+}
+
+.white-key:hover{
+
+    background:#f8f8f8;
+}
+
+.white-key:active{
+
+    transform:translateY(4px);
+
+    background:#dddddd;
+}
+
+/* Black Keys */
+
+.black-key{
+
+    position:absolute;
+
+    width:46px;
+
+    height:190px;
+
+    background:linear-gradient(#343434,#000);
+
+    border:1px solid #4a4a4a;
+
+    border-radius:0 0 8px 8px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:12px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    z-index:5;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.15s;
+}
+
+.black-key:hover{
+
+    background:linear-gradient(#555,#111);
+}
+
+.black-key:active{
+
+    transform:translateY(4px);
+}
+
+/* Black Key Positions */
+
+.key-1{left:50px;}
+.key-2{left:122px;}
+
+.key-3{left:266px;}
+.key-4{left:338px;}
+.key-5{left:410px;}
+
+.key-6{left:554px;}
+.key-7{left:626px;}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+.piano-container{
+    padding:22px;
+}
+
+.piano-header h1{
+    font-size:36px;
+}
+
+.piano-keyboard{
+    height:280px;
+}
+
+.white-key{
+
+    width:60px;
+    min-width:60px;
+
+    font-size:14px;
+}
+
+.black-key{
+
+    width:38px;
+    height:165px;
+
+    font-size:13px;
+}
+
+.key-1{left:42px;}
+.key-2{left:102px;}
+
+.key-3{left:222px;}
+.key-4{left:282px;}
+.key-5{left:342px;}
+
+.key-6{left:462px;}
+.key-7{left:522px;}
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+body{
+    padding:10px;
+}
+
+.piano-container{
+    padding:18px;
+}
+
+.piano-header{
+
+    margin-bottom:25px;
+}
+
+.piano-header h1{
+
+    font-size:28px;
+
+    letter-spacing:1px;
+}
+
+.piano-keyboard{
+
+    height:220px;
+}
+
+.white-key{
+
+    width:48px;
+    min-width:48px;
+
+    font-size:13px;
+
+    padding-bottom:10px;
+}
+
+.black-key{
+
+    width:30px;
+
+    height:125px;
+
+    font-size:11px;
+
+    padding-bottom:8px;
+}
+
+.key-1{left:33px;}
+.key-2{left:81px;}
+
+.key-3{left:177px;}
+.key-4{left:225px;}
+.key-5{left:273px;}
+
+.key-6{left:369px;}
+.key-7{left:417px;}
+
+}
+
+/* Small Phones */
+
+@media(max-width:360px){
+
+.piano-header h1{
+
+    font-size:22px;
+}
+
+.white-key{
+
+    width:42px;
+    min-width:42px;
+}
+
+.black-key{
+
+    width:26px;
+    height:110px;
+}
+
+}
