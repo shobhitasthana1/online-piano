@@ -10,7 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    min-width: 100vw;
+    overflow: hidden;
     background-color: #050505;
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
@@ -26,6 +27,7 @@ body {
     background: #0a0a0a;
     border: 1px solid #1a1a1a;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease;
 }
 
 .piano-header {
@@ -119,27 +121,49 @@ body {
 .key-6 { left: calc((var(--w-width) + var(--key-gap)) * 8 - (var(--b-width) / 2)); }
 .key-7 { left: calc((var(--w-width) + var(--key-gap)) * 9 - (var(--b-width) / 2)); }
 
-@media (max-width: 768px) {
-    .piano-container {
-        padding: 30px;
-    }
-    .piano-keyboard {
-        --w-width: 55px;
-        --b-width: 34px;
-        --b-height: 150px;
-    }
-    .white-key { height: 240px; }
+@media (max-width: 900px) {
+    .piano-container { padding: 30px; }
+    .piano-keyboard { --w-width: 60px; --b-width: 36px; --b-height: 160px; }
+    .white-key { height: 260px; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .piano-container {
+        transform: rotate(90deg);
+        width: 85vh;
         padding: 20px;
     }
-    .piano-keyboard {
-        --w-width: 45px;
-        --b-width: 28px;
-        --b-height: 120px;
+    .piano-header {
+        margin-bottom: 20px;
     }
-    .white-key { height: 200px; font-size: 12px; }
+    .piano-header h1 {
+        font-size: 26px;
+    }
+    .piano-keyboard {
+        --w-width: 6.5vh;
+        --b-width: 4vh;
+        --b-height: 140px;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+    }
+    .white-key {
+        height: 220px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    body { padding: 10px; }
+    .piano-container { padding: 15px; }
+    .piano-header { margin-bottom: 15px; }
+    .piano-header h1 { font-size: 24px; }
+    .piano-keyboard {
+        --w-width: 50px;
+        --b-width: 30px;
+        --b-height: 110px;
+        justify-content: center;
+    }
+    .white-key { height: 180px; font-size: 12px; }
     .black-key { font-size: 10px; }
 }
