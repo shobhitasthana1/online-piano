@@ -9,11 +9,9 @@ This project lets you play piano notes using both **mouse clicks** and your **co
 👉 **Live Website:**
 https://shobhit-piano.vercel.app/
 
+
 ## 📸 Preview
 
-> Save your project screenshot as **output.png** inside the project folder.
-
-```md
 ![Virtual Piano](output.png)
 ```
 
