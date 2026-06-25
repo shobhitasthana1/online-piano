@@ -12,7 +12,7 @@ https://shobhit-piano.vercel.app/
 
 ## 📸 Preview
 
-![Virtual Piano](output.png)
+![Virtual Piano]()
 ```
 
 ---
