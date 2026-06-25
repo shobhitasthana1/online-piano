@@ -14,7 +14,7 @@ https://shobhit-piano.vercel.app/
 > Save your project screenshot as **output.png** inside the project folder.
 
 ```md
-![Virtual Piano](output.png)
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/e9bdbe9f-9dad-436b-8797-6d02bf0b57a9" />
 ```
 
 ---
